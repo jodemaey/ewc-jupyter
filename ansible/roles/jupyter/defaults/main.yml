@@ -1,6 +1,6 @@
 ---
-conda_prefix: /opt/conda
-conda_env_name: jupyter
+conda_prefix: /data/conda
+conda_env_name: eupp-collabhub-gpu
 conda_update_base: false
 conda_env_wipe: false
 
