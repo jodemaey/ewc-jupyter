@@ -4,5 +4,6 @@
   gather_facts: true
   roles:
     - update
+    - fs
     - mars
     - jupyter

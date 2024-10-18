@@ -1,0 +1,7 @@
+---
+extra_volume = vdb
+extra_volume_number = vdb1
+mount_label = data-1
+mount_point = /data
+
+

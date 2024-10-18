@@ -1,0 +1,5 @@
+---
+- block:
+    - name: Create new volume
+      include_tasks: create_extra_fs.yml
+  tags: filesystem

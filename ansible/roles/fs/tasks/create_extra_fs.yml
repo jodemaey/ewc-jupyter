@@ -1,0 +1,10 @@
+---
+- name: "Partition new volume {{ extra_volume_number }}"
+  shell: "parted --script  -- /dev/{{ extra_volume}} mklabel gpt && parted --script --align optimal -- /dev/{{ extra_volume }} mkpart primary ext4 0% 100% && mkfs.ext4 -L {{ mount_label }} /dev/{{ extra_volume_number }}"
+
+- name: "Creating mount point {{ mount_point }}"
+  shell: "mkdir {{ mount_point }}"
+
+- name: "Mounting /dev/{{ extra_volume_number }}"
+  shell: 'echo "LABEL={{ mount_label }} {{ mount_point }} ext4 defaults 0 0" | tee -a /etc/fstab > /dev/null'
+
