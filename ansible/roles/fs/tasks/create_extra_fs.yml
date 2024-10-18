@@ -1,6 +1,6 @@
 ---
 - name: "Partition new volume {{ extra_volume_number }}"
-  shell: "parted --script  -- /dev/{{ extra_volume}} mklabel gpt && parted --script --align optimal -- /dev/{{ extra_volume }} mkpart primary ext4 0% 100% && mkfs.ext4 -L {{ mount_label }} /dev/{{ extra_volume_number }}"
+  shell: "parted --script  -- /dev/{{ extra_volume }} mklabel gpt && parted --script --align optimal -- /dev/{{ extra_volume }} mkpart primary ext4 0% 100% && mkfs.ext4 -L {{ mount_label }} /dev/{{ extra_volume_number }}"
 
 - name: "Creating mount point {{ mount_point }}"
   shell: "mkdir {{ mount_point }}"
