@@ -5,6 +5,9 @@
 - name: "Creating mount point {{ mount_point }}"
   shell: "mkdir {{ mount_point }}"
 
-- name: "Mounting /dev/{{ extra_volume_number }}"
+- name: Updating /etc/fstab
   shell: 'echo "LABEL={{ mount_label }} {{ mount_point }} ext4 defaults 0 0" | tee -a /etc/fstab > /dev/null'
+
+- name: "Mounting /dev/{{ extra_volume_number }}"
+  shell: "mount -av"
 
