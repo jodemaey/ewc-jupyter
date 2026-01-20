@@ -1,6 +1,6 @@
 ---
-extra_volume: vdb
-extra_volume_number: vdb1
+extra_volume: sdb
+extra_volume_number: sdb1
 mount_label: data-1
 mount_point: /data
 
