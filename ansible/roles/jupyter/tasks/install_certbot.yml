@@ -83,8 +83,8 @@
 
 - name: Set Cert paths
   set_fact:
-    ssl_key: "/etc/letsencrypt/live/{{ host_fqdn }}/privkey.pem"
-    ssl_cert: "/etc/letsencrypt/live/{{ host_fqdn }}/fullchain.pem"
+    ssl_key: "/etc/letsencrypt/live/{{ host_fqdn }}.be-rmi-climdyn.f.ewcloud.host/privkey.pem"
+    ssl_cert: "/etc/letsencrypt/live/{{ host_fqdn }}.be-rmi-climdyn.f.ewcloud.host/fullchain.pem"
 
 - name: "Setup Certbot to generate and renew SSL certificate for {{ host_fqdn }} as {{ cert_email}}"
   command:
