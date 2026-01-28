@@ -3,7 +3,7 @@
   become: yes
   gather_facts: true
   roles:
-    - update
+    #- update
     - fs
     - mars
     - jupyter
